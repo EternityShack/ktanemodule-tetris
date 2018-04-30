@@ -38,7 +38,11 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+<<<<<<< HEAD
   m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.574817, a: 1}
+=======
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+>>>>>>> Updated Unity version, and added Twitch Plays support.
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -61,7 +65,11 @@ LightmapSettings:
     m_TextureHeight: 1024
     m_AO: 0
     m_AOMaxDistance: 1
+<<<<<<< HEAD
     m_CompAOExponent: 0
+=======
+    m_CompAOExponent: 1
+>>>>>>> Updated Unity version, and added Twitch Plays support.
     m_CompAOExponentDirect: 0
     m_Padding: 2
     m_LightmapParameters: {fileID: 0}
@@ -69,25 +77,45 @@ LightmapSettings:
     m_TextureCompression: 1
     m_FinalGather: 0
     m_FinalGatherFiltering: 1
+<<<<<<< HEAD
     m_FinalGatherRayCount: 1024
     m_ReflectionCompression: 2
     m_MixedBakeMode: 1
+=======
+    m_FinalGatherRayCount: 256
+    m_ReflectionCompression: 2
+    m_MixedBakeMode: 2
+>>>>>>> Updated Unity version, and added Twitch Plays support.
     m_BakeBackend: 0
     m_PVRSampling: 1
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
     m_PVRBounces: 2
+<<<<<<< HEAD
     m_PVRFiltering: 0
+=======
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
+>>>>>>> Updated Unity version, and added Twitch Plays support.
     m_PVRFilteringMode: 1
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
     m_PVRFilteringGaussRadiusAO: 2
+<<<<<<< HEAD
     m_PVRFilteringAtrousColorSigma: 1
     m_PVRFilteringAtrousNormalSigma: 1
     m_PVRFilteringAtrousPositionSigma: 1
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 0
+=======
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
+  m_LightingDataAsset: {fileID: 0}
+  m_UseShadowmask: 1
+>>>>>>> Updated Unity version, and added Twitch Plays support.
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -107,16 +135,28 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
+<<<<<<< HEAD
   m_NavMeshData: {fileID: 0}
 --- !u!1 &290702900
+=======
+    debug:
+      m_Flags: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!1 &1550953486
+>>>>>>> Updated Unity version, and added Twitch Plays support.
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 290702902}
   - component: {fileID: 290702901}
+=======
+  - component: {fileID: 1550953488}
+  - component: {fileID: 1550953487}
+>>>>>>> Updated Unity version, and added Twitch Plays support.
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -124,12 +164,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!108 &290702901
+=======
+--- !u!108 &1550953487
+>>>>>>> Updated Unity version, and added Twitch Plays support.
 Light:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 290702900}
+=======
+  m_GameObject: {fileID: 1550953486}
+>>>>>>> Updated Unity version, and added Twitch Plays support.
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
@@ -156,6 +204,7 @@ Light:
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
+<<<<<<< HEAD
   m_FalloffTable:
     m_Table[0]: 0
     m_Table[1]: 0
@@ -170,23 +219,35 @@ Light:
     m_Table[10]: 0
     m_Table[11]: 0
     m_Table[12]: 0
+=======
+>>>>>>> Updated Unity version, and added Twitch Plays support.
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+<<<<<<< HEAD
 --- !u!4 &290702902
+=======
+--- !u!4 &1550953488
+>>>>>>> Updated Unity version, and added Twitch Plays support.
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 290702900}
   m_LocalRotation: {x: 0.40821794, y: -0.23456973, z: 0.109381676, w: 0.87542605}
+=======
+  m_GameObject: {fileID: 1550953486}
+  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+>>>>>>> Updated Unity version, and added Twitch Plays support.
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+<<<<<<< HEAD
 --- !u!1001 &341757330
 Prefab:
   m_ObjectHideFlags: 0
@@ -234,17 +295,27 @@ Prefab:
   m_ParentPrefab: {fileID: 100100000, guid: 8814ea52310d2614a9feda02ec355ae4, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &897828183
+=======
+--- !u!1 &1714379814
+>>>>>>> Updated Unity version, and added Twitch Plays support.
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 897828188}
   - component: {fileID: 897828187}
   - component: {fileID: 897828186}
   - component: {fileID: 897828185}
   - component: {fileID: 897828184}
+=======
+  - component: {fileID: 1714379818}
+  - component: {fileID: 1714379817}
+  - component: {fileID: 1714379816}
+  - component: {fileID: 1714379815}
+>>>>>>> Updated Unity version, and added Twitch Plays support.
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -252,18 +323,29 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!81 &897828184
+=======
+--- !u!81 &1714379815
+>>>>>>> Updated Unity version, and added Twitch Plays support.
 AudioListener:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 897828183}
   m_Enabled: 1
 --- !u!124 &897828185
+=======
+  m_GameObject: {fileID: 1714379814}
+  m_Enabled: 1
+--- !u!124 &1714379816
+>>>>>>> Updated Unity version, and added Twitch Plays support.
 Behaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 897828183}
   m_Enabled: 1
 --- !u!92 &897828186
@@ -274,15 +356,28 @@ Behaviour:
   m_GameObject: {fileID: 897828183}
   m_Enabled: 1
 --- !u!20 &897828187
+=======
+  m_GameObject: {fileID: 1714379814}
+  m_Enabled: 1
+--- !u!20 &1714379817
+>>>>>>> Updated Unity version, and added Twitch Plays support.
 Camera:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 897828183}
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0.019607844}
+=======
+  m_GameObject: {fileID: 1714379814}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+>>>>>>> Updated Unity version, and added Twitch Plays support.
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -302,27 +397,88 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
+<<<<<<< HEAD
   m_HDR: 0
+=======
+  m_HDR: 1
+>>>>>>> Updated Unity version, and added Twitch Plays support.
   m_AllowMSAA: 1
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+<<<<<<< HEAD
   m_StereoMirrorMode: 0
 --- !u!4 &897828188
+=======
+--- !u!4 &1714379818
+>>>>>>> Updated Unity version, and added Twitch Plays support.
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 897828183}
   m_LocalRotation: {x: 0.5891032, y: 0, z: 0, w: 0.8080578}
   m_LocalPosition: {x: 0, y: 5.32, z: -2.01}
+=======
+  m_GameObject: {fileID: 1714379814}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0.4, z: 0}
+>>>>>>> Updated Unity version, and added Twitch Plays support.
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+<<<<<<< HEAD
   m_LocalEulerAnglesHint: {x: 72.1868, y: -360, z: -360}
 --- !u!1001 &2104915011
+=======
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1001 &1864833438
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 439642, guid: 8814ea52310d2614a9feda02ec355ae4, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439642, guid: 8814ea52310d2614a9feda02ec355ae4, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439642, guid: 8814ea52310d2614a9feda02ec355ae4, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439642, guid: 8814ea52310d2614a9feda02ec355ae4, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439642, guid: 8814ea52310d2614a9feda02ec355ae4, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439642, guid: 8814ea52310d2614a9feda02ec355ae4, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439642, guid: 8814ea52310d2614a9feda02ec355ae4, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 439642, guid: 8814ea52310d2614a9feda02ec355ae4, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 8814ea52310d2614a9feda02ec355ae4, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1970323749
+>>>>>>> Updated Unity version, and added Twitch Plays support.
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -361,6 +517,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+=======
+    - target: {fileID: 478950, guid: 10a2e5165a905fd4b84ab6bcc81abd89, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 478950, guid: 10a2e5165a905fd4b84ab6bcc81abd89, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 478950, guid: 10a2e5165a905fd4b84ab6bcc81abd89, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+>>>>>>> Updated Unity version, and added Twitch Plays support.
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 10a2e5165a905fd4b84ab6bcc81abd89, type: 2}
   m_IsPrefabParent: 0

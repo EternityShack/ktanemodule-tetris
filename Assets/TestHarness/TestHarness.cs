@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
 
 using System.Reflection;
 using Newtonsoft.Json;
+=======
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using Newtonsoft.Json;
+using UnityEngine;
+>>>>>>> Updated Unity version, and added Twitch Plays support.
 
 public class FakeBombInfo : MonoBehaviour
 {
@@ -184,8 +193,11 @@ public class FakeBombInfo : MonoBehaviour
     public delegate void LightsOn();
     public LightsOn ActivateLights;
 
+<<<<<<< HEAD
     private Widget widgetHandler;
 
+=======
+>>>>>>> Updated Unity version, and added Twitch Plays support.
     void FixedUpdate()
     {
         if (solved) return;
@@ -436,10 +448,16 @@ public class TestHarness : MonoBehaviour
             {
                 if (f.FieldType.Equals(typeof(KMBombInfo)))
                 {
+<<<<<<< HEAD
                     KMBombInfo component = (KMBombInfo)f.GetValue(s);
                     if (component.OnBombExploded != null) fakeInfo.Detonate += new FakeBombInfo.OnDetonate(component.OnBombExploded);
                     if (component.OnBombSolved != null) fakeInfo.HandleSolved += new FakeBombInfo.OnSolved(component.OnBombSolved);
                     continue;
+=======
+                    KMBombInfo component = (KMBombInfo) f.GetValue(s);
+                    fakeInfo.Detonate += delegate { if (component.OnBombExploded != null) component.OnBombExploded(); };
+                    fakeInfo.HandleSolved += delegate { if (component.OnBombSolved != null) component.OnBombSolved(); };
+>>>>>>> Updated Unity version, and added Twitch Plays support.
                 }
             }
         }
@@ -631,6 +649,123 @@ public class TestHarness : MonoBehaviour
         }
     }
 
+<<<<<<< HEAD
+=======
+    // TPK Methods
+    protected void DoInteractionStart(KMSelectable interactable)
+    {
+        interactable.OnInteract();
+    }
+
+    protected void DoInteractionEnd(KMSelectable interactable)
+    {
+        if (interactable.OnInteractEnded != null)
+        {
+            interactable.OnInteractEnded();
+        }
+    }
+
+    Dictionary<Component, HashSet<KMSelectable>> ComponentHelds = new Dictionary<Component, HashSet<KMSelectable>> { };
+    IEnumerator SimulateModule(Component component, Transform moduleTransform, MethodInfo method, string command)
+    {
+        // Simple Command
+        if (method.ReturnType == typeof(KMSelectable[]))
+        {
+            KMSelectable[] selectableSequence = null;
+            try
+            {
+                selectableSequence = (KMSelectable[]) method.Invoke(component, new object[] { command });
+                if (selectableSequence == null)
+                {
+                    yield break;
+                }
+            }
+            catch (System.Exception ex)
+            {
+                Debug.LogErrorFormat("An exception occurred while trying to invoke {0}.{1}; the command invokation will not continue.", method.DeclaringType.FullName, method.Name);
+                Debug.LogException(ex);
+                yield break;
+            }
+
+            int initialStrikes = fakeInfo.strikes;
+            int initialSolved = fakeInfo.GetSolvedModuleNames().Count;
+            foreach (KMSelectable selectable in selectableSequence)
+            {
+                DoInteractionStart(selectable);
+                yield return new WaitForSeconds(0.1f);
+                DoInteractionEnd(selectable);
+
+                if (fakeInfo.strikes != initialStrikes || fakeInfo.GetSolvedModuleNames().Count != initialSolved)
+                {
+                    break;
+                }
+            };
+        }
+
+        // Complex Commands
+        if (method.ReturnType == typeof(IEnumerator))
+        {
+            IEnumerator responseCoroutine = null;
+            try
+            {
+                responseCoroutine = (IEnumerator) method.Invoke(component, new object[] { command });
+            }
+            catch (System.Exception ex)
+            {
+                Debug.LogErrorFormat("An exception occurred while trying to invoke {0}.{1}; the command invokation will not continue.", method.DeclaringType.FullName, method.Name);
+                Debug.LogException(ex);
+                yield break;
+            }
+
+            if (responseCoroutine == null)
+                yield break;
+
+            if (!ComponentHelds.ContainsKey(component))
+                ComponentHelds[component] = new HashSet<KMSelectable>();
+            HashSet<KMSelectable> heldSelectables = ComponentHelds[component];
+
+            int initialStrikes = fakeInfo.strikes;
+            int initialSolved = fakeInfo.GetSolvedModuleNames().Count;
+
+            while (responseCoroutine.MoveNext())
+            {
+                object currentObject = responseCoroutine.Current;
+                if (currentObject is KMSelectable)
+                {
+                    KMSelectable selectable = (KMSelectable) currentObject;
+                    if (heldSelectables.Contains(selectable))
+                    {
+                        DoInteractionEnd(selectable);
+                        heldSelectables.Remove(selectable);
+                        if (fakeInfo.strikes != initialStrikes || fakeInfo.GetSolvedModuleNames().Count != initialSolved)
+                            yield break;
+                    }
+                    else
+                    {
+                        DoInteractionStart(selectable);
+                        heldSelectables.Add(selectable);
+                    }
+                }
+                else if (currentObject is string)
+                {
+                    Debug.Log("Twitch handler sent: " + currentObject);
+                    yield return currentObject;
+                }
+                else if (currentObject is Quaternion)
+                {
+                    moduleTransform.localRotation = (Quaternion) currentObject;
+                }
+                else
+                    yield return currentObject;
+
+                if (fakeInfo.strikes != initialStrikes || fakeInfo.GetSolvedModuleNames().Count != initialSolved)
+                    yield break;
+            }
+        }
+    }
+
+    string command = "";
+>>>>>>> Updated Unity version, and added Twitch Plays support.
     void OnGUI()
     {
         if (GUILayout.Button("Activate Needy Modules"))
@@ -668,6 +803,31 @@ public class TestHarness : MonoBehaviour
         }
 
         GUILayout.Label("Time remaining: " + fakeInfo.GetFormattedTime());
+<<<<<<< HEAD
+=======
+
+        GUILayout.Space(10);
+
+        command = GUILayout.TextField(command);
+        if ((GUILayout.Button("Simulate Twitch Command") || Event.current.keyCode == KeyCode.Return) && command != "")
+        {
+            Debug.Log("Twitch Command: " + command);
+
+            foreach (KMBombModule module in FindObjectsOfType<KMBombModule>())
+            {
+                Component[] allComponents = module.gameObject.GetComponentsInChildren<Component>(true);
+                foreach (Component component in allComponents)
+                {
+                    System.Type type = component.GetType();
+                    MethodInfo method = type.GetMethod("ProcessTwitchCommand", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+
+                    if (method != null)
+                        StartCoroutine(SimulateModule(component, module.transform, method, command));
+                }
+            }
+            command = "";
+        }
+>>>>>>> Updated Unity version, and added Twitch Plays support.
     }
 
     private Light testLight;
@@ -681,7 +841,11 @@ public class TestHarness : MonoBehaviour
 
         GameObject o = new GameObject("Light");
         o.transform.localPosition = new Vector3(0, 3, 0);
+<<<<<<< HEAD
         o.transform.localRotation = Quaternion.Euler(new Vector3(50, -30, 0));
+=======
+        o.transform.localRotation = Quaternion.Euler(new Vector3(130, -30, 0));
+>>>>>>> Updated Unity version, and added Twitch Plays support.
         testLight = o.AddComponent<Light>();
         testLight.type = LightType.Directional;
     }

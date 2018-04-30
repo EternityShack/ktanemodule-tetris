@@ -229,7 +229,48 @@ public class TetrisModule : MonoBehaviour {
 		return false;
 	}
 
+<<<<<<< HEAD
 	/*void Update()
+=======
+    public string TwitchHelpMessage = "Move the piece left or right with \"!{0} l\" or \"!{0} r\". Rotate the piece clockwise or counter-clockwise with \"!{0} cw\" or \"!{0} ccw\". Set the piece down with \"!{0} down\". Combine commands with commas. !{0} l, r, cw, ccw, down";
+
+    IEnumerator ProcessTwitchCommand(string command)
+    {
+        yield return null;
+
+        command = command.Replace(" ", "");
+        string[] split = command.Split(',');
+
+        for (int i = 0; i < split.Length; i++)
+        {
+            switch (split[i])
+            {
+                case "l":
+                    MoveLeftButton.OnInteract();
+                    yield return new WaitForSeconds(0.1f);
+                    break;
+                case "r":
+                    MoveRightButton.OnInteract();
+                    yield return new WaitForSeconds(0.1f);
+                    break;
+                case "cw":
+                    TurnRightButton.OnInteract();
+                    yield return new WaitForSeconds(0.1f);
+                    break;
+                case "ccw":
+                    TurnLeftButton.OnInteract();
+                    yield return new WaitForSeconds(0.1f);
+                    break;
+                case "down":
+                    DownButton.OnInteract();
+                    yield return new WaitForSeconds(0.1f);
+                    break;
+            }
+        }
+    }
+
+    /*void Update()
+>>>>>>> Updated Unity version, and added Twitch Plays support.
 	{
 		if (tetr != null) {
 			bool moved = false;

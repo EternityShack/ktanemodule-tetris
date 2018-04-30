@@ -5,18 +5,30 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 439642}
   - 114: {fileID: 114848120511536268}
   - 114: {fileID: 114617884380056244}
+=======
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 439642}
+  - component: {fileID: 114848120511536268}
+  - component: {fileID: 114617884380056244}
+>>>>>>> Updated Unity version, and added Twitch Plays support.
   m_Layer: 0
   m_Name: TestHarness
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
+<<<<<<< HEAD
   m_IsActive: 0
+=======
+  m_IsActive: 1
+>>>>>>> Updated Unity version, and added Twitch Plays support.
 --- !u!4 &439642
 Transform:
   m_ObjectHideFlags: 1
@@ -26,10 +38,17 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+=======
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> Updated Unity version, and added Twitch Plays support.
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -1,9 +1,18 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 6408640ea340f1545b5bd36d038049c4
 folderAsset: yes
 timeCreated: 1479442573
 licenseType: Free
 DefaultImporter:
+=======
+guid: 0056c588a3f9df846aa7c5b9db9fc15e
+folderAsset: yes
+timeCreated: 1525121798
+licenseType: Free
+DefaultImporter:
+  externalObjects: {}
+>>>>>>> Updated Unity version, and added Twitch Plays support.
   userData: 
   assetBundleName: 
   assetBundleVariant: 

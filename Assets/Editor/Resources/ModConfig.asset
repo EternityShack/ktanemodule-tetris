@@ -13,6 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: spwizTetris
   title: Tetris
+<<<<<<< HEAD
   description: "[i]Chances are you\u2019ve already played many iterations of this
     game.[/i]\r\n\r\n[h1]About[/h1]\r\nA needy module with a Tetris game. Each time
     the module activates, you will need to place 3 tetris pieces.\r\n\r\n[h1]Manual[/h1]\r\nA
@@ -21,3 +22,12 @@ MonoBehaviour:
   version: 1.1.0
   outputFolder: build
   previewImage: {fileID: 2800000, guid: 343afc5948fbfd7428b94350fc2eaf04, type: 3}
+=======
+  description: 'Place Tetris pieces on the board without getting yourself walled in.
+
+'
+  version: 1.5
+  outputFolder: C:\Program Files (x86)\Steam\steamapps\common\Keep Talking and Nobody
+    Explodes\mods
+  previewImage: {fileID: 2800000, guid: 96cbb6cd358994e4baf927743eef5a51, type: 3}
+>>>>>>> Updated Unity version, and added Twitch Plays support.

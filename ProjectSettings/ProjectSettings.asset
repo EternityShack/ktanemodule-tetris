@@ -46,7 +46,11 @@ PlayerSettings:
   defaultScreenHeight: 768
   defaultScreenWidthWeb: 960
   defaultScreenHeightWeb: 600
+<<<<<<< HEAD
   m_StereoRenderingPath: 0
+=======
+  m_StereoRenderingPath: 1
+>>>>>>> Updated Unity version, and added Twitch Plays support.
   m_ActiveColorSpace: 0
   m_MTRendering: 1
   m_MobileMTRendering: 0
@@ -166,7 +170,11 @@ PlayerSettings:
     serializedVersion: 2
     m_Bits: 238
   iPhoneSdkVersion: 988
+<<<<<<< HEAD
   iOSTargetOSVersionString: 7.0
+=======
+  iOSTargetOSVersionString: 6.0
+>>>>>>> Updated Unity version, and added Twitch Plays support.
   tvOSSdkVersion: 0
   tvOSRequireExtendedGameController: 0
   tvOSTargetOSVersionString: 9.0
@@ -279,7 +287,11 @@ PlayerSettings:
     m_Enabled: 0
     m_Devices: []
   - m_BuildTarget: Standalone
+<<<<<<< HEAD
     m_Enabled: 0
+=======
+    m_Enabled: 1
+>>>>>>> Updated Unity version, and added Twitch Plays support.
     m_Devices:
     - Oculus
   - m_BuildTarget: Tizen
@@ -396,7 +408,11 @@ PlayerSettings:
   switchAccessibleURLs: 
   switchLegalInformation: 
   switchMainThreadStackSize: 1048576
+<<<<<<< HEAD
   switchPresenceGroupId: 0x01004b9000490000
+=======
+  switchPresenceGroupId: 
+>>>>>>> Updated Unity version, and added Twitch Plays support.
   switchLogoHandling: 0
   switchReleaseVersion: 0
   switchDisplayVersion: 1.0.0
@@ -408,8 +424,13 @@ PlayerSettings:
   switchUserAccountSaveDataSize: 0
   switchUserAccountSaveDataJournalSize: 0
   switchApplicationAttribute: 0
+<<<<<<< HEAD
   switchCardSpecSize: 4
   switchCardSpecClock: 25
+=======
+  switchCardSpecSize: -1
+  switchCardSpecClock: -1
+>>>>>>> Updated Unity version, and added Twitch Plays support.
   switchRatingsMask: 0
   switchRatingsInt_0: 0
   switchRatingsInt_1: 0
@@ -423,7 +444,11 @@ PlayerSettings:
   switchRatingsInt_9: 0
   switchRatingsInt_10: 0
   switchRatingsInt_11: 0
+<<<<<<< HEAD
   switchLocalCommunicationIds_0: 0x01004b9000490000
+=======
+  switchLocalCommunicationIds_0: 
+>>>>>>> Updated Unity version, and added Twitch Plays support.
   switchLocalCommunicationIds_1: 
   switchLocalCommunicationIds_2: 
   switchLocalCommunicationIds_3: 
@@ -443,6 +468,12 @@ PlayerSettings:
   switchUdpSendBufferSize: 9
   switchUdpReceiveBufferSize: 42
   switchSocketBufferEfficiency: 4
+<<<<<<< HEAD
+=======
+  switchSocketInitializeEnabled: 1
+  switchNetworkInterfaceManagerInitializeEnabled: 1
+  switchPlayerConnectionEnabled: 1
+>>>>>>> Updated Unity version, and added Twitch Plays support.
   ps4NPAgeRating: 12
   ps4NPTitleSecret: 
   ps4NPTrophyPackPath: 
@@ -573,7 +604,14 @@ PlayerSettings:
   webGLCompressionFormat: 1
   scriptingDefineSymbols: {}
   platformArchitecture: {}
+<<<<<<< HEAD
   scriptingBackend: {}
+=======
+  scriptingBackend:
+    Android: 0
+    Standalone: 0
+    WebPlayer: 0
+>>>>>>> Updated Unity version, and added Twitch Plays support.
   incrementalIl2cppBuild: {}
   additionalIl2CppArgs: 
   scriptingRuntimeVersion: 0
@@ -658,7 +696,20 @@ PlayerSettings:
     daydream:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
+<<<<<<< HEAD
   cloudServicesEnabled: {}
+=======
+  cloudServicesEnabled:
+    Analytics: 0
+    Build: 0
+    Collab: 0
+    ErrorHub: 0
+    Game_Performance: 0
+    Hub: 0
+    Purchasing: 0
+    UNet: 0
+    Unity_Ads: 0
+>>>>>>> Updated Unity version, and added Twitch Plays support.
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
   cloudProjectId: 
